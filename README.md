@@ -1,12 +1,12 @@
  Mohammed's HTML & CSS Portfolio
 
 Welcome to my portfolio website!  
-This project was created as part of the HTML and CSS module in The Academy of learning Software Developer Boot Camp.
+This project was created as part of the HTML , CSS  and javascrpit module in The Academy of learning Software Developer Boot Camp.
 
 ---
 
  About This Project
-This is a simple portfolio website built using **HTML and CSS**.  
+This is a simple portfolio website built using **HTML and CSS**.  and Javascrpit
 It includes the following sections:
 
 - Home  

@@ -1,102 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <title>Mohammed | Portfolio</title>
-    <link rel="stylesheet" href="stylesheet/portfolio.css">
+    <link rel="shortcut icon" type="img/jpg" href="images/coding_icon.png">
+    <link rel="stylesheet" type="text/css" href="stylesheet/portfolio.css">
 </head>
 
 <body class="Background">
 
     <!-- Navbar -->
-    <nav class="Navbar">
+    <div class="Navbar">
         <a class="active" href="#Home">Home</a>
+        <a href="#Slideshow">Slideshow</a>
         <a href="#About">About</a>
         <a href="#Projects">Projects</a>
-        <a href="#Contact">Contact</a>
-    </nav>
+        <a href="#GitHub">GitHub</a>
+        <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
+    </div>
 
-    <!-- Hero Section -->
-    <header id="Home" class="Hero">
-        <div class="Hero_Text">
-            <h1>Mohammed's Portfolio</h1>
-            <p>Welcome to my personal website — where I share my journey, skills, and projects.</p>
+    <!-- Background video -->
+    <div id="Home">
+        <video autoplay muted loop id="Typing_Video">
+            <source src="images/video/Typing.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <!-- Video text -->
+    <div class="Video_Text">
+        <h1 class="white-text">Mohammed's Portfolio</h1>
+        <strong>
+            <p class="center">
+                Welcome to my personal website — where I share my journey, skills, and projects.
+                <br><br>
+                Thank you for stopping by and enjoy!
+            </p>
+        </strong>
+    </div>
+
+    <!-- Slideshow -->
+    <div id="Slideshow">
+        <div id="Slideshow_Background">
+            <div id="Slideshow_Container">
+                <!-- Slide 1 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/my photo.jpeg" alt="Mohammed">
+                    <div class="text">I'm available to assist you on your project!</div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/HTML_CSS_and_JavaScript.jpeg" alt="HTML CSS JS">
+                    <div class="text">I am a full-stack software developer trained in HTML, CSS, JavaScript,</div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/Python.png" alt="Python">
+                    <div class="text">the popular programming language Python,</div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/C_Sharp_and_Dot_NET.png" alt="C#">
+                    <div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
+                </div>
+                <!-- Slide 5 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/SQL_and_Database.jpg" alt="SQL">
+                    <div class="text">back end development, databases and SQL.</div>
+                </div>
+                <!-- Slide 6 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/my photo.jpeg" alt="Mohammed">
+                    <div class="text"><a class="white-text contact" onclick="openForm()">Contact me now!</a></div>
+                </div>
+                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <div style="text-align: center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
         </div>
-    </header>
+    </div>
 
     <!-- About Section -->
-    <section id="About" class="Section">
-        <div class="Row">
-            <div class="Column_2">
-<img src="images/my photo.jpeg" alt="my photo">
-            </div>
-            <div class="Column_1">
-                <h2>About Me</h2>
-                <p>
-                    Hello! My name is Mohammed Ali. I am a passionate web developer who enjoys building clean,
-                    modern, and functional websites.  
-                    <br><br>
-                    I am currently studying at Academy Of Learning and have experience with HTML, CSS, JavaScript,
-                    SQL, and C#.  
-                    <br><br>
-                    I love learning, creating, and solving problems — and I’m excited to share my work with you.
-                </p>
-            </div>
+    <div class="Row" id="About">
+        <div class="Column_2">
+            <img src="images/my photo.jpeg" alt="Mohammed">
         </div>
-    </section>
+        <div class="Column_1">
+            <h1>About Me</h1>
+            <p>
+                Hello! My name is Mohammed Ali. I am a passionate web developer who enjoys building clean, modern, and functional websites.
+                <br><br>
+                I am currently studying at Academy Of Learning and have experience with HTML, CSS, JavaScript, SQL, and C#.
+                <br><br>
+                I love learning, creating, and solving problems — and I'm excited to share my work with you. <a onclick="openForm()" class="contact">Contact</a> me below!
+            </p>
+        </div>
+    </div>
 
     <!-- Projects Section -->
-    <section id="Projects" class="Section Alt">
-        <h2 class="center">Projects</h2>
-        <div class="Row">
+    <div class="Row" id="Projects">
+        <div class="Column_1">
+            <h1>Projects</h1>
             <div class="Project_Card">
                 <img src="images/project1.jpg" alt="Project 1">
-                <h3>Project Title</h3>
-                <p>A website built with modern technologies to book tickets for your favorite movies.
- https://mido201666.github.io/bootstrap4_project/</p>
+                <h3>Movie Booking Website</h3>
+                <p>A website built with modern technologies to book tickets for your favorite movies.</p>
+                <a href="https://mido201666.github.io/bootstrap4_project/" target="_blank">View Project</a>
             </div>
-
-                   
             <div class="Project_Card">
                 <img src="images/World Travel Website.jpg" alt="Project 2">
-                <h3>Project Title</h3>
+                <h3>World Travel Website</h3>
                 <p>World Travel Website.</p>
-                https://mido201666.github.io/One-Page-Website/
-            </div>
-
-
-    </section>
-
-    <!-- Contact Section -->
-    <section id="Contact" class="Section">
-        <div class="Row">
-            <div class="Column_2">
-                <img src="images/programmer.jpg" alt="Contact Image">
-            </div>
-
-            <div class="Column_1">
-                <h2>Contact Me</h2>
-                <form action="YOUR_FORMSPREE_LINK" method="POST">
-                    <label>Name:</label>
-                    <input type="text" name="name" placeholder="Enter your name">
-
-                    <label>Email:</label>
-                    <input type="email" name="email" placeholder="Enter your email">
-
-                    <label>Message:</label>
-                    <textarea name="message" placeholder="Write your message"></textarea>
-
-                    <input type="submit" value="Send Message">
-                </form>
+                <a href="https://mido201666.github.io/One-Page-Website/" target="_blank">View Project</a>
             </div>
         </div>
-    </section>
+    </div>
+
+    <!-- GitHub Section -->
+    <div class="Row" id="GitHub">
+        <div class="Column_1">
+            <h1>GitHub</h1>
+            <p>You can view my coding projects on my GitHub profile here:</p>
+            <p class="center"><a href="https://github.com/Mido201666" target="_blank">Mido201666 Github</a></p>
+        </div>
+        <div class="Column_2">
+            <a href="https://github.com/Mido201666" target="_blank"><img src="images/GitHub.png"></a>
+        </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div id="Contact">
+        <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+        <div class="form-popup" id="myForm">
+            <form action="https://formspree.io/your@email.com" method="POST" class="form-container">
+                <h1>Contact</h1>
+                <label><b>Name</b></label>
+                <input type="text" placeholder="Type your name here" name="name" required>
+                <label><b>Phone</b></label>
+                <input type="text" placeholder="Type your phone number here" name="phone">
+                <label><b>Email</b></label>
+                <input type="text" placeholder="Type your email address here" name="email" required>
+                <label><b>Message</b></label>
+                <input type="text" placeholder="Type your message here" name="message">
+                <button type="submit" class="btn">SUBMIT</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+            </form>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
         <p class="center">&copy; 2026 Mohammed — All Rights Reserved</p>
     </footer>
 
+    <script src="JS/portfolio.js"></script>
 </body>
 </html>
